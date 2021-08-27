@@ -5,8 +5,8 @@ import userReducer from './usersReduser'
 
 const mainReducer = combineReducers({    //store is object
     login: loginReducer,
-    question: questionReducer,
-    user: userReducer,
+    questions: questionReducer,
+    users: userReducer,
   })
 
 export default mainReducer;
