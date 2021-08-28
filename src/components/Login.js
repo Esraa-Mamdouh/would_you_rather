@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import Router from './Router' 
 import Card from 'react-bootstrap/Card'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
+
 import { connect } from 'react-redux'
 import { login } from '../actions/loginAction'
 import { handleRetrieveUsers } from '../actions/userActions'
@@ -31,16 +33,20 @@ class Login extends Component {
                 this.props.login(user)
             }
         })
+        this.setState(()=>({option:"Select User"}))
        
       }
     render() {
         console.log("users=", this.props.users)
         console.log("login user =", this.props.l)
         return (
+            <div>
+                {/* {(Object.keys(this.props.l).length !== 0) ? <Router/> :  */}
+            
             <div style={{display:"flex", justifyContent:'space-around' }}>
                 <Card style={{ width: '25rem'}} >
-                    {/* TO DO: search how to add image here */}
-                <Card.Img variant="top" src= {placeHolder}/>
+                    {/* TO DO: search how to add image here{placeHolder}  this.props.l.avatarURL */}
+                <Card.Img variant="top" src= {placeHolder} />
                 <Card.Body>
                     <Card.Title>Would You Rather!</Card.Title>
                     <Card.Text>
@@ -67,6 +73,8 @@ class Login extends Component {
                     <Button variant="primary" onClick={this.handleLogin}>Login</Button>
                 </Card.Body>
                 </Card>
+                </div> 
+                {/* } */}
             </div>
         )
     }

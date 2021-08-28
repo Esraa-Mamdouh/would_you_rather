@@ -1,12 +1,22 @@
 import './App.css';
 import { connect } from 'react-redux'
 import Login from './components/Login'
+import Leaderboard from './components/Leaderboard'
+import Navigation from './components/Navigation'
+
+
+import {
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Login/>
+      <Navigation/>
+      {/* <Login/> */}
       {/* Esraa Mamdouh kkkk */}
+      < Leaderboard/>
     </div>
   );
 }
