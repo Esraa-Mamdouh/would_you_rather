@@ -7,6 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import { connect } from 'react-redux'
 import { login } from '../actions/loginAction'
 import { handleRetrieveUsers } from '../actions/userActions'
+import placeHolder from "../images/would_you_rather_logo.png";
 
 // TODO: Add react Router logic
 class Login extends Component {
@@ -38,10 +39,10 @@ class Login extends Component {
         return (
             <div style={{display:"flex", justifyContent:'space-around' }}>
                 <Card style={{ width: '25rem'}} >
-                    {/* TODO: search how to add image here */}
-                <Card.Img variant="top" src="../eren.jpg" />
+                    {/* TO DO: search how to add image here */}
+                <Card.Img variant="top" src= {placeHolder}/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>Would You Rather!</Card.Title>
                     <Card.Text>
                     Welcome to Would you rather, please login to continue
                     </Card.Text>
