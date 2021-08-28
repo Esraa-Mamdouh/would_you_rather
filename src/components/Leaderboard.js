@@ -32,7 +32,6 @@ class Leaderboard extends Component {
         console.log("inside render", this.props.users)
         return (
             <div>
-                Heloooooz
                 <div>
                 {this.props.users.map((user,index)=>(
                     < LeaderboardCard

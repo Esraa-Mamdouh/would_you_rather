@@ -18,7 +18,7 @@ import {
         this.props.login(user)
     }
     render() {
-        const name='Esraa Mamdouh'
+        //const name='Esraa Mamdouh'
         // const url = mikasa
         return (
             <div >

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Login from './components/Login'
 import Leaderboard from './components/Leaderboard'
 import Navigation from './components/Navigation'
-
+import NewQuestion from './components/NewQuestion'
 
 import {
   Switch,
@@ -16,7 +16,8 @@ function App() {
       <Navigation/>
       {/* <Login/> */}
       {/* Esraa Mamdouh kkkk */}
-      < Leaderboard/>
+      {/* < Leaderboard/> */}
+      <NewQuestion/>
     </div>
   );
 }
