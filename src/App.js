@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux'
+import Login from './components/Login'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Login/>
+      {/* Esraa Mamdouh kkkk */}
     </div>
   );
 }
 
 export default App;
+// const mapStateToProps = (state) => ({
+//   users: state.usersReducer.users
+// })
+// export default connect(mapStateToProps, { login, getUsers })(Login);
+
+// const mapStateToProps = (state) => ({
+//   currentUser: state.loginReducer.currentUser,
+//   questions: state.questionsReducer.questions
+// })
+// export default connect(mapStateToProps, {})(App);

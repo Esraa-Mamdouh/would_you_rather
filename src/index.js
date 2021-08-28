@@ -12,7 +12,6 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
         <App />
-        <div>Esraa Mamdouh</div>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

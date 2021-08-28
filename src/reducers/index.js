@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux'
 import loginReducer from './loginReducer'
-import questionReducer from './questionsReducer'
-import userReducer from './usersReduser'
+import questionsReducer from './questionsReducer'
+import usersReducer from './usersReduser'
 
 const mainReducer = combineReducers({    //store is object
     login: loginReducer,
-    questions: questionReducer,
-    users: userReducer,
+    questions: questionsReducer,
+    users: usersReducer,
   })
 
 export default mainReducer;

@@ -3,7 +3,7 @@ import { ADD_QUESTION, ADD_ANSWER, GET_QUESTIONS } from "../actions/types"
 //state = questions
 //Reducer 1--- it is a pure function takes old state and action as parameters and return a new state 
 export default function questionsReducer(state=[],action){   //empty array of Questions
-    switch(action.types){
+    switch(action.type){
         case ADD_QUESTION:
             return( 
                 [action.payload, ...state]
@@ -26,7 +26,7 @@ export default function questionsReducer(state=[],action){   //empty array of Qu
             )
         case GET_QUESTIONS:
             return (
-                action.payload     
+                Object.values(action.payload)   
             )
         default:
             return state

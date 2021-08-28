@@ -1,5 +1,5 @@
 import {GET_USERS} from './types'
-import {_getUsers }from '../_DATA.js'
+import {_getUsers }from '../_DATA'
 
 function retrieveUsers (users){
     return{
@@ -12,6 +12,7 @@ function retrieveUsers (users){
 export  function handleRetrieveUsers (){
     return(dispatch)=>{
         _getUsers().then((users)=>{
+            console.log("inside userAction",users)
             dispatch(retrieveUsers(users))
         })
     }
