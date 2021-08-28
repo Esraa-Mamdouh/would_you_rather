@@ -4,7 +4,8 @@ import Login from './components/Login'
 import Leaderboard from './components/Leaderboard'
 import Navigation from './components/Navigation'
 import NewQuestion from './components/NewQuestion'
-
+import Home from './components/Home'
+import UnansweredQuestion from './components/UnansweredQuestion'
 import {
   Switch,
   Route,
@@ -17,7 +18,9 @@ function App() {
       {/* <Login/> */}
       {/* Esraa Mamdouh kkkk */}
       {/* < Leaderboard/> */}
-      <NewQuestion/>
+      {/* <NewQuestion/> */}
+      {/* <Home/> */}
+      <UnansweredQuestion/>
     </div>
   );
 }
