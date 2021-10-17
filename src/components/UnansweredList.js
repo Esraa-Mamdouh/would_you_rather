@@ -72,20 +72,22 @@ class UnansweredList extends Component {
                             ))[0]
                             return(
                                 //TODO:
-                                // <UnansweredQuestion
-                                // key={unansweredQuestion.id}
-                                // userid={user.id}
-                                // avatar={user.avatarURL}
-                                // optionOne={unansweredQuestion.optionOne.text}
-                                // optionTwo={unansweredQuestion.optionTwo.text}
-                                // />
-
-                                <GeneralCard
+                                <UnansweredQuestion
                                 key={unansweredQuestion.id}
                                 userid={user.id}
                                 avatar={user.avatarURL}
                                 optionOne={unansweredQuestion.optionOne.text}
+                                optionTwo={unansweredQuestion.optionTwo.text}
+                                qid={unansweredQuestion.id}
                                 />
+
+                                // <GeneralCard
+                                // key={unansweredQuestion.id}
+                                // userid={user.id}
+                                // avatar={user.avatarURL}
+                                // optionOne={unansweredQuestion.optionOne.text}
+                                // qid={unansweredQuestion.id}
+                                // />
                             )
                         })
                         ///////////////////////////////////

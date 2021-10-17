@@ -10,6 +10,9 @@ import { connect } from 'react-redux'
 import { login } from '../actions/loginAction'
 import { handleRetrieveUsers } from '../actions/userActions'
 import placeHolder from "../images/would_you_rather_logo.png";
+import {
+    Link
+  } from "react-router-dom";
 
 // TODO: Add react Router logic
 class Login extends Component {
@@ -70,7 +73,11 @@ class Login extends Component {
                                 
 
                         </DropdownButton>
-                    <Button variant="primary" onClick={this.handleLogin}>Login</Button>
+                    {/* {this.props.l}? */}
+                    <Link to="/home">
+                        <Button variant="primary" onClick={this.handleLogin}>Login</Button>
+                    </Link >
+                    {/* :<Link to="/"></Link> */}
                 </Card.Body>
                 </Card>
                 </div> 

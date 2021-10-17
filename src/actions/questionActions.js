@@ -26,17 +26,21 @@ function retrieveQuestions (questions){
 //receives ({author,optionOneText,optionTwoText})
 export function handleAddQuestion(question){
     return (dispatch)=>{
-        _saveQuestion(question).then((q)=>
-        dispatch( addQuestionAction(q)))
+        _saveQuestion(question).then((q)=>{
+            
+        dispatch( addQuestionAction(q))
+    })
         
     }
 }
 
 //receives({authedUser,qid,answer})
 export function handleAddAnswer (answer){
+    console.log("inside handleAddQuestion11111111111",answer)
     return(dispatch)=>{
-        _saveQuestionAnswer(answer).then((a)=>{
-            dispatch(addAnswerAction(a))
+        _saveQuestionAnswer(answer).then((answer)=>{
+            console.log("inside handleAddQuestion",answer)
+            dispatch(addAnswerAction(answer))
         })
         
     }

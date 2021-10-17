@@ -12,7 +12,7 @@ export default function questionsReducer(state=[],action){   //empty array of Qu
         case  ADD_ANSWER:
             return(
                 state.map(question=>{
-                    console.log(question)    
+                    console.log("question= ", question)    
                     let optionNumber ;   //optionOne or optionTwo
                     if (action.payload.qid === question.id){
                         //question object

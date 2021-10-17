@@ -188,7 +188,7 @@ export function _saveQuestionAnswer ({ authedUser, qid, answer }) {
           }
         }
       }
-
+      console.log("inside _DATA users= ",users)
       questions = {
         ...questions,
         [qid]: {
@@ -199,7 +199,7 @@ export function _saveQuestionAnswer ({ authedUser, qid, answer }) {
           }
         }
       }
-
+      console.log("inside _DATA questions= ",questions)
       res()
     }, 500)
   })

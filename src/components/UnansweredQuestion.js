@@ -47,14 +47,27 @@ import PropTypes from 'prop-types';
 
     handleSubmit =(e)=>{
         // TODO: Add add answer logic
-      }
+        e.preventDefault()
+        this.props.handleAddAnswer(
+            //TODO: add login user later
+            //authedUser: this.props.authedUser,
+            {
+                answer: this.state.option,
+                qid: this.props.qid,
+                authedUser:'tylermcginnis',
+            }
+        )
+        console.log("quid=",this.props.qid,"answer=",this.state.option)
+        alert("answer submitted")
 
+      }
+     
     render() {
         //const question=this.props.question
         //TODO: for test add later 
         //console.log("users= ",this.props.avatar)
-        console.log("question= ",this.props.question)
-        
+        //console.log("question= ",this.props.question)
+        console.log("qid=",this.props.qid)
         // let avatar;
         // this.props.users.forEach((user)=>{
         //     if(user.id === this.state.question.author){
@@ -114,6 +127,7 @@ UnansweredQuestion.propTypes={
     optionOne:PropTypes.string.isRequired,
     optionTwo:PropTypes.string.isRequired,
     userid:PropTypes.string.isRequired,
+    qid:PropTypes.string.isRequired,
 
   }
   // const mapDispatchToProps = dispatch =>({

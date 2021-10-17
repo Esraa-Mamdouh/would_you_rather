@@ -26,13 +26,13 @@ import {
                 <Nav.Item>
                     {/* eventKey="link-1" href="/home"*/}
                     {/* <Link to="/home"> */}
-                        <Nav.Link  as={Link} to="/home" eventKey="link-1" >Home</Nav.Link>
+                        <Nav.Link  as={Link} to="/home" eventKey="link-1" active ="true">Home</Nav.Link>
                     {/* </Link> */}
                 </Nav.Item>
                 <Nav.Item>
                     {/* href="/newquestion" */}
                     {/* <Link to="/new-question"> */}
-                        <Nav.Link  as={Link} to="/new-question" eventKey="link-2">New Question</Nav.Link>
+                        <Nav.Link  as={Link} to="/add" eventKey="link-2">New Question</Nav.Link>
                     {/* </Link> */}
                 </Nav.Item>
                 <Nav.Item>
@@ -45,8 +45,10 @@ import {
                 </Nav.Item>
                 {/* user */}
                 <div >
-                    <p>Hello, {Object.keys(this.props.loginUser).length >0? this.props.loginUser.id : "New User" }     
+                    <p>Hello, {Object.keys(this.props.loginUser).length >0? this.props.loginUser.id : "New User" }   
+                    <Link to="/">  
                     <Button variant="danger" onClick={this.handleLogout} style={{display:'inline'}}>Logout</Button>
+                    </Link> 
                     </p>
                     
                     {/* <img alt="avtar" src={url}/> */}
