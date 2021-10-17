@@ -60,7 +60,7 @@ let questions = {
       text: 'become a superhero',
     },
     optionTwo: {
-      votes: ['johndoe', 'sarahedo'],
+      votes: ['johndoe','sarahedo'],
       text: 'become a supervillain'
     }
   },

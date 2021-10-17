@@ -6,6 +6,9 @@ import Navigation from './components/Navigation'
 import NewQuestion from './components/NewQuestion'
 import Home from './components/Home'
 import UnansweredQuestion from './components/UnansweredQuestion'
+import UnansweredList from './components/UnansweredList'
+import AansweredList from './components/AnsweredList'
+
 import {
   Switch,
   Route,
@@ -14,13 +17,15 @@ import {
 function App() {
   return (
     <div className="App">
-      <Navigation/>
+      {/* <Navigation/> */}
       {/* <Login/> */}
       {/* Esraa Mamdouh kkkk */}
       {/* < Leaderboard/> */}
       {/* <NewQuestion/> */}
       {/* <Home/> */}
-      <UnansweredQuestion/>
+      {/* <UnansweredQuestion/> */}
+      <UnansweredList/>
+      {/* <AansweredList/> */}
     </div>
   );
 }

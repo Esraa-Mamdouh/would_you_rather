@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 //import { Button } from 'react-bootstrap'
 
 class LeaderboardCard extends Component {
-    //  TODO: remove this state and use users from store
+    //  TODO: remove this state and use users from store //DONE
      
     render() {
         return (
-            // TODO: display grid leader board
+            // TODO: display grid leader board //DONE
             <div style={{display:"flex", justifyContent:'space-around' }}>
                 <Card style={{ width: '18rem', }}>
                     {/* TODO: add photo later */}
@@ -18,15 +18,15 @@ class LeaderboardCard extends Component {
                     <Card.Body>
                         <Card.Title>{this.props.id}</Card.Title>
                         <Card.Title>Rank: {this.props.rank}</Card.Title>
-                        <Card.Text>
+                        
                             <div>
-                                {/* TODO: add dynamic data later */}
-                                <p>Answered Questions: {this.props.answeredQuestions}</p>
-                                <p>Created Questions: {this.props.createdQuestions}</p>
-                                <p>Score: {this.props.score}</p>
+                                {/* TODO: add dynamic data later //DONE */}
+                                <Card.Text >Answered Questions: {this.props.answeredQuestions}</Card.Text >
+                                <Card.Text >Created Questions: {this.props.createdQuestions}</Card.Text >
+                                <Card.Text >Score: {this.props.score}</Card.Text >
                                 
                             </div>
-                        </Card.Text>
+                        {/* </Card.Text> */}
                     </Card.Body>
                 </Card>
             </div>

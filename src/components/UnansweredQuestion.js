@@ -5,38 +5,44 @@ import { Button } from 'react-bootstrap'
 // import Form from 'react-bootstrap/Form'
 
 import { connect } from 'react-redux'
-import * from '../images'
+//import avatar from '../images/levi.jpg'
 import { handleRetrieveUsers } from '../actions/userActions'
 import { handleRetrieveQuestions,handleAddAnswer } from '../actions/questionActions'
+import PropTypes from 'prop-types';
 
- class UnansweredCard extends Component {
+
+ class UnansweredQuestion extends Component {
     state = {
         option: "",
-         //TODO: only for the test 
-         question:{
-            id: 'xj352vofupe1dqz9emx13r',
-            author: 'johndoe',
-            timestamp: 1493579767190,
-            optionOne: {
-              votes: ['johndoe'],
-              text: 'write JavaScript',
-            },
-            optionTwo: {
-              votes: ['tylermcginnis'],
-              text: 'write Swift'
-            }
-          }
     }
+    // state = {
+    //     option: "",
+    //      //TODO: only for the test 
+    //      question:{
+    //         id: 'xj352vofupe1dqz9emx13r',
+    //         author: 'johndoe',
+    //         timestamp: 1493579767190,
+    //         optionOne: {
+    //           votes: ['johndoe'],
+    //           text: 'write JavaScript',
+    //         },
+    //         optionTwo: {
+    //           votes: ['tylermcginnis'],
+    //           text: 'write Swift'
+    //         }
+    //       }
+    // }
        
 
      componentDidMount(){
-        this.props.handleRetrieveQuestions()
-        this.props.handleRetrieveUsers ()
+        //this.props.handleRetrieveQuestions()
+        this.props.handleRetrieveUsers()
      } 
     onClick = (value) => () =>{
         this.setState(()=>({
             option:value,
         }))
+        console.log("option is: ",this.state.option)
     }
 
     handleSubmit =(e)=>{
@@ -44,36 +50,44 @@ import { handleRetrieveQuestions,handleAddAnswer } from '../actions/questionActi
       }
 
     render() {
-        console.log("users= ",this.props.users)
-        console.log("questions= ",this.props.questions)
-        let avatar;
-        this.props.users.forEach((user)=>{
-            if(user.id === this.state.question.author){
-                console.log("inside avatar",avatar)
-                avatar=user.avatarURL
-            }
-        })
+        //const question=this.props.question
+        //TODO: for test add later 
+        //console.log("users= ",this.props.avatar)
+        console.log("question= ",this.props.question)
+        
+        // let avatar;
+        // this.props.users.forEach((user)=>{
+        //     if(user.id === this.state.question.author){
+                
+        //         avatar=user.avatarURL
+        //         console.log("inside avatar",avatar)
+        //     }
+        // })
         console.log("option is: ",this.state.option)
         return (
-            <div>
                 <div style={{display:"flex", justifyContent:'space-around' }}>
                 <Card style={{ width: '18rem', }}>
                     {/* TODO: add author avatar photo later */}
-                    <Card.Img variant="top" src="holder.js/100px180"/>
+                    {/* //TODO */}
+                    {/* <Card.Img variant="top" src={this.props.avatar}/> */}
+                    <Card.Img variant="top" src={this.props.avatar}/>
                     <Card.Body>
-                        <Card.Title> 
+                        <Card.Title> Asked by:
                             {
-                                 avatar   
+                                this.props.userid   
                             }
                         </Card.Title>
+                        <Card.Text style={{fontSize:'18px', fontWeight:'bold' }}>
+                            Would you Rather
+                        </Card.Text >
                         <Card.Text >
                             
                                 {/* <div style={{ float:'left'}}> */}
-                                    <input type="radio" value="Male" name="gender" onClick={this.onClick("optionOne")}/> Option One 
+                                    <input type="radio" value={this.props.optionOne} name="option" onClick={this.onClick("optionOne")}/> {this.props.optionOne} 
                                 {/* </div> */}
                                 <br/>
                                 {/* <div style={{ float:'left'}} > */}
-                                    <input type="radio" value="Male" name="gender" onClick={this.onClick("optionTwo")} /> Option Two
+                                    <input type="radio" value={this.props.optionTwo} name="option" onClick={this.onClick("optionTwo")} /> {this.props.optionTwo}
                                 {/* </div> */}
                                 <br/>
                                 {/* <div style={{marginTop:'40px',}}> */}
@@ -84,7 +98,6 @@ import { handleRetrieveQuestions,handleAddAnswer } from '../actions/questionActi
                     </Card.Body>
                 </Card>
             </div>
-            </div>
         )
     }
 }
@@ -94,9 +107,18 @@ const mapStateToProps = (state) => ({
     loginUser: state.login,
     questions : state.questions,
   })
+
+UnansweredQuestion.propTypes={
+    avatar: PropTypes.string.isRequired,
+    //question:  PropTypes.object.isRequired,
+    optionOne:PropTypes.string.isRequired,
+    optionTwo:PropTypes.string.isRequired,
+    userid:PropTypes.string.isRequired,
+
+  }
   // const mapDispatchToProps = dispatch =>({
   //     login: ()=> dispatch(login(user)),
   //     getUsers: ()=> dispatch(handleRetrieveUsers())
   // })
   //TODO: retrieve users and questions for test 
-  export default connect(mapStateToProps,  { handleRetrieveQuestions,handleRetrieveUsers,handleAddAnswer } )(UnansweredCard);
+  export default connect(mapStateToProps,  { handleRetrieveUsers,handleAddAnswer } )(UnansweredQuestion);

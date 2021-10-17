@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5739ad41.chunk.css",
+    "main.js": "/static/js/main.2b1df3ac.chunk.js",
+    "main.js.map": "/static/js/main.2b1df3ac.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6828a739.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6828a739.js.map",
+    "static/css/2.65df572b.chunk.css": "/static/css/2.65df572b.chunk.css",
+    "static/js/2.5cbb0b93.chunk.js": "/static/js/2.5cbb0b93.chunk.js",
+    "static/js/2.5cbb0b93.chunk.js.map": "/static/js/2.5cbb0b93.chunk.js.map",
+    "static/js/3.0e088548.chunk.js": "/static/js/3.0e088548.chunk.js",
+    "static/js/3.0e088548.chunk.js.map": "/static/js/3.0e088548.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.65df572b.chunk.css.map": "/static/css/2.65df572b.chunk.css.map",
+    "static/css/main.5739ad41.chunk.css.map": "/static/css/main.5739ad41.chunk.css.map",
+    "static/js/2.5cbb0b93.chunk.js.LICENSE.txt": "/static/js/2.5cbb0b93.chunk.js.LICENSE.txt",
+    "static/media/eren.8135de69.jpg": "/static/media/eren.8135de69.jpg",
+    "static/media/levi.23c856b1.jpg": "/static/media/levi.23c856b1.jpg",
+    "static/media/mikasa.f7d013af.jpg": "/static/media/mikasa.f7d013af.jpg",
+    "static/media/would_you_rather_logo.5e619a36.png": "/static/media/would_you_rather_logo.5e619a36.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6828a739.js",
+    "static/css/2.65df572b.chunk.css",
+    "static/js/2.5cbb0b93.chunk.js",
+    "static/css/main.5739ad41.chunk.css",
+    "static/js/main.2b1df3ac.chunk.js"
+  ]
+}
